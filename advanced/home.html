@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> Exercise 3 </title>
+    <!-- <meta http-equiv="refresh" content="3; URL=./contact.html"> -->
+</head>
+<style>
+    @font-face {
+        font-family: 'HappyMonkey';
+        src: url(./HappyMonkey-Regular.ttf);
+    }
+    * {
+        font-family: 'HappyMonkey';
+    }
+    body {
+        margin: 0;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    header span {
+        line-height: 80px;
+        font-size: 24px;
+        color: white;
+        margin: 0 20px;
+    }
+
+    header span a {
+        color: white;
+        text-decoration: none;
+    }
+
+    header span:visited {
+        color: white;
+    }
+
+    .footercolumn {
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer * {
+        color: white;
+    }
+
+    .info {
+        display: inline-block;
+        padding: 50px;
+        border-radius: 25px;
+        background-color: rgb(0, 255, 94);
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 200px;
+
+    }
+    @keyframes bounce-7 {
+  0%   { transform: scale(1,1)      translateY(0); }
+  10%  { transform: scale(1.1,.9)   translateY(0); }
+  30%  { transform: scale(.9,1.1)   translateY(-100px); }
+  50%  { transform: scale(1.05,.95) translateY(0); }
+  57%  { transform: scale(1,1)      translateY(-7px); }
+  64%  { transform: scale(1,1)      translateY(0); }
+  100% { transform: scale(1,1)      translateY(0); }
+}
+.info {
+    box-shadow: 3px 3px 10px 3px;
+  transform-origin: bottom;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: bounce-7;
+        animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+.companylogo {
+    position: absolute;
+    top: 0;
+    left: 150px;
+    
+}
+nav  {
+    position: relative;
+    width: 100%;
+    /* background: red; */
+    justify-content: flex-end !important;
+}
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+table {
+    margin: 0 auto;
+    text-align: center;
+}
+tr {
+   display: block;
+    text-align: center;
+    
+}
+input,label {
+    font-size: 30px;
+}
+input[type='text'],
+input[type='email']{
+    border-radius: 20px;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+
+</style>
+
+<body>
+    <header style="display: block; width: 100%; background-color: black; position: fixed; z-index: 1;">
+        <nav
+            style=" padding-left:0; margin:0; display: flex; flex-direction: row; align-items: center; justify-content: center; list-style: none;">
+            <img class="companylogo" src="./Untitled.png" alt="logo">
+            <span><a href="./home.html">Home</a></span>
+            <span><a href="./about.html">About</a></span>
+            <span><a href="./contact.html">Contact</a></span>
+            <span><a href="./contact.html">Shop</a></span>
+            <span><a href="./contact.html">AGB</a></span>
+        </nav>
+    </header>
+    <main>
+        <section
+            style=" padding-top: 100px; position: relative;background-position:center center; height: 60vh; background-image: url(./header.jpg); background-size: cover; background-repeat: no-repeat;">
+            <div class="info">
+                <p><strong>OUT NOW</strong> </p>
+            </div>
+        </section>
+        <section style="padding: 50px 100px; background-color: gray;">
+            <h1 style="text-align: center; font-size: 40px;">HEADER 1</h1>
+            <p style="font-size: 18px; color: white;">
+                Lorem ipsum dolfor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
+                ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+            </p>
+        </section>
+        <section style="padding: 50px 100px; background-color: gray;">
+            <h1>SignUp!!</h1>
+            <form action="?self=123" method="GET">
+                <table>
+                    <tr>
+                        <th>Contact</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="name">Dein Name</label>
+                            <input id="name" type="text" placeholder="your name"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email">Deine Email</label>
+                            <input id="email" type="email" placeholder="your email"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label style="display: block;" for="comment">Dein Kommentar</label>
+                            <textarea id="comment" cols="100" rows="20"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" placeholder="ABSCHICKEN"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+        
+
+    </main>
+    <footer style="background-color: black; height: 45vh; display: flex;">
+        <div class="footercolumn column1">
+            <h2> &copy; Maniboy</h2>
+            <p>SOme text</p>
+        </div>
+        <div class="footercolumn column2">
+            <h2>Title 2</h2>
+            <p>SOme text</p>
+        </div>
+        <div class="footercolumn column3">
+            <h2>Title 3</h2>
+            <p>SOme text</p>
+        </div>
+
+    </footer>
+</body>
+
+</html>
